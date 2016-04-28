@@ -1,4 +1,4 @@
-package com.tmy.controller;
+package com.shaw.spring.controller;
 
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;

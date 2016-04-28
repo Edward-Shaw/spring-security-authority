@@ -1,12 +1,12 @@
-package com.tmy.config;
+package com.shaw.spring.configuration;
 
 import javax.annotation.PostConstruct;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.tmy.entry.User;
-import com.tmy.repository.UserRepository;
+import com.shaw.spring.repository.UserRepository;
+import com.shaw.spring.resource.User;
 
 @Service
 public class DataInit {

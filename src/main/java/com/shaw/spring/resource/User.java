@@ -1,9 +1,4 @@
-package com.tmy.entry;
-
-import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-import javax.persistence.Id;
+package com.shaw.spring.resource;
 
 @Entity
 public class User {

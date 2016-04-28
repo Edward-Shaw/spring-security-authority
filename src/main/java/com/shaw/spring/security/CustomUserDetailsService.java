@@ -1,4 +1,4 @@
-package com.tmy.security;
+package com.shaw.spring.security;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,8 +9,8 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
-import com.tmy.entry.User;
-import com.tmy.repository.UserRepository;
+import com.shaw.spring.repository.UserRepository;
+import com.shaw.spring.resource.User;
 
 public class CustomUserDetailsService implements UserDetailsService {
 

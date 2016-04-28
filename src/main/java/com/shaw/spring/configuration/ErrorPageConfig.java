@@ -1,4 +1,4 @@
-package com.tmy.config;
+package com.shaw.spring.configuration;
 
 import org.springframework.boot.context.embedded.ConfigurableEmbeddedServletContainer;
 import org.springframework.boot.context.embedded.EmbeddedServletContainerCustomizer;
