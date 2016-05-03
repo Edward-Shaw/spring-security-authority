@@ -60,5 +60,33 @@ The base class for expression root objects is `SecurityExpressionRoot`. This pro
 | hasPermission(Object target, Objectpermission) | Returns true if the user has access to the provided target for the given permission. For example, hasPermission(domainObject,'read') | 
 | hasPermission(Object targetId,String targetType, Objectpermission) | Returns true if the user has access to the provided target for the given permission. For example, hasPermission(1,'com.example.domain.Message','read') |
 
+### Register your PermissionEvaluatorHandler
+``` java
+@Configuration
+@ComponentScan
+@EnableAutoConfiguration
+@SpringBootApplication
+public class Application extends SpringBootServletInitializer{
+	@Override
+	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+		return application.sources(Application.class);
+	}
+	
+	public static void main(String[] args) {
+		//SpringApplication.run(Application.class, args);
+		
+		final ApplicationContext ctx = SpringApplication.run(Application.class, args);
+
+        final Map<String, DefaultWebSecurityExpressionHandler> expressionHandlers =
+                ctx.getBeansOfType(DefaultWebSecurityExpressionHandler.class);
+
+        if(expressionHandlers.values().toArray()[0] != null)
+            ((DefaultWebSecurityExpressionHandler) expressionHandlers.values().toArray()[0]).setPermissionEvaluator(new MyPermissionEvaluator());
+	}
+
+}
+
+```
+
 
 
